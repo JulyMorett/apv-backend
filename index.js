@@ -24,7 +24,12 @@ const corsOptions = {
         };
     }
 };
-
+// Enable cors
+app.use(
+  cors({
+    origin: '*',
+  }),
+);
 app.use(cors(corsOptions));
 
 app.use("/api/veterinarios", veterinarioRoutes);
